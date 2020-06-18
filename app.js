@@ -15,19 +15,22 @@
 /*document.addEventListener("click",function (event) {
   document.getElementById("tic game").innerHTML = "x"
 });*/
+ 
 
-//appeare the x 
-
-function addX (){
- myBtn
+function addX (cell, currentClass){ //add x 
+ myBtn.classList.add(currentClass)
 }
 
+                                        
 
-$(document).ready(function(){
-  $(".myBtn").click(function(){
-    $("x").show();
+$(document).ready(function(){                       
+    $('td').click(function() {
+    td = $(this);            
   });
-});
+
+
+
+
 
 //toggle 
 
@@ -41,10 +44,3 @@ var playerData = [
 ];
 
 
-function player() {
-   // "use strict";
-    currentPlayer = (currentPlayer == 2) ? currentPlayer = 1 : currentPlayer = 2;
-
-    document.getElementById("player").innerHTML = currentPlayer;
-    window.alert("Speler "+currentPlayer+" is aan de beurt");
-}
