@@ -16,8 +16,35 @@
   document.getElementById("tic game").innerHTML = "x"
 });*/
 
+//appeare the x 
+
+function addX (){
+ myBtn
+}
 
 
-$("td").click(function(){
-  console.log("The paragraph was clicked.");
+$(document).ready(function(){
+  $(".myBtn").click(function(){
+    $("x").show();
+  });
 });
+
+//toggle 
+
+var playerData = [
+  {
+    src: "cross",
+    className: "kruis"},
+  {
+    src: "circle",
+    className: "rondje"}
+];
+
+
+function player() {
+   // "use strict";
+    currentPlayer = (currentPlayer == 2) ? currentPlayer = 1 : currentPlayer = 2;
+
+    document.getElementById("player").innerHTML = currentPlayer;
+    window.alert("Speler "+currentPlayer+" is aan de beurt");
+}
